@@ -11,6 +11,7 @@
 		4670D24A2CC15ECE00B309D5 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 4670D2492CC15ECE00B309D5 /* FirebaseFirestore */; };
 		4670D24C2CC2619A00B309D5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4670D24B2CC2619A00B309D5 /* GoogleService-Info.plist */; };
 		4670D24E2CC51BDD00B309D5 /* Assets 2.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4670D24D2CC51BDD00B309D5 /* Assets 2.xcassets */; };
+		4670D2502CC5B3A700B309D5 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4670D24F2CC5B3A700B309D5 /* Constants.swift */; };
 		46910C802C5A2E9F00A45801 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46910C7F2C5A2E9F00A45801 /* AppDelegate.swift */; };
 		46910C822C5A2E9F00A45801 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46910C812C5A2E9F00A45801 /* SceneDelegate.swift */; };
 		46910C842C5A2E9F00A45801 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46910C832C5A2E9F00A45801 /* WelcomeViewController.swift */; };
@@ -27,6 +28,7 @@
 		3EF44668FBA2F987A5776F70 /* Pods_Flashchat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Flashchat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4670D24B2CC2619A00B309D5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4670D24D2CC51BDD00B309D5 /* Assets 2.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Assets 2.xcassets"; sourceTree = "<group>"; };
+		4670D24F2CC5B3A700B309D5 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		46910C7C2C5A2E9F00A45801 /* Flashchat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Flashchat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		46910C7F2C5A2E9F00A45801 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		46910C812C5A2E9F00A45801 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 			children = (
 				46910C7F2C5A2E9F00A45801 /* AppDelegate.swift */,
 				46910C812C5A2E9F00A45801 /* SceneDelegate.swift */,
+				4670D24F2CC5B3A700B309D5 /* Constants.swift */,
 				46910C9E2C5A314300A45801 /* Models */,
 				46910C9F2C5A314F00A45801 /* Views */,
 				46910C932C5A2EFC00A45801 /* Controller */,
@@ -260,6 +263,7 @@
 				46910C992C5A302300A45801 /* ChatViewController.swift in Sources */,
 				46910C952C5A2FE200A45801 /* RegisterViewController.swift in Sources */,
 				46910C9B2C5A312100A45801 /* Message.swift in Sources */,
+				4670D2502CC5B3A700B309D5 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

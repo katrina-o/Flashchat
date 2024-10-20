@@ -7,7 +7,6 @@ target 'Flashchat' do
   # Pods for Flashchat
 pod 'CLTypingLabel' ,'~> 0.4.0'
 pod 'SnapKit', '~> 5.0.0'
-pod 'Firebase/Auth'
-pod 'Firebase/Firestore'
+
 
 end

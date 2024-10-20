@@ -6,16 +6,23 @@
 //
 
 import UIKit
+import SnapKit
 
 class MessageCell: UITableViewCell {
     
-    
      static let identifire = "Custom Cell"
+    
+    let messageStackView: UIStackView = {
+        let stack = UIStackView()
+        stack.axis = .horizontal
+        stack.spacing = 10
+        return stack
+    }()
     
      var messageView: UIView = {
         let view = UIView()
          view.backgroundColor = .brandPurple
-         view.layer.cornerRadius = 23
+         view.layer.cornerRadius = 18
         return view
     }()
     
@@ -45,7 +52,6 @@ class MessageCell: UITableViewCell {
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-//        messageView.layer.cornerRadius = messageView.frame.size.height / 5
         setupUI()
     }
     
@@ -54,16 +60,36 @@ class MessageCell: UITableViewCell {
     }
     
     public func configure(/*with view: UIView, */ messageLabel: String, rightImage:UIImage,  and leftImage: UIImage) {
-        self.messageLabel.text = messageLabel
-        self.rightImage.image = rightImage
-        self.leftImage.image = leftImage
+        DispatchQueue.main.async {
+            self.messageLabel.text = messageLabel
+            self.rightImage.image = rightImage
+            self.leftImage.image = leftImage
+        }
     }
     
     func setupUI() {
-        self.contentView.addSubview(leftImage)
-        self.contentView.addSubview(messageView)
+        addSubview(messageStackView)
+        messageStackView.addArrangedSubview(leftImage)
+        messageStackView.addArrangedSubview(messageView)
+        messageStackView.addArrangedSubview(rightImage)
         messageView.addSubview(messageLabel)
-        self.contentView.addSubview(rightImage)
-    }
-    
+        
+        messageStackView.snp.makeConstraints { make in
+            make.edges.equalToSuperview().inset(10)
+        }
+        
+        leftImage.snp.makeConstraints { make in
+            make.width.equalTo(40)
+            make.height.equalTo(40)
+        }
+        
+        rightImage.snp.makeConstraints { make in
+            make.width.equalTo(40)
+            make.height.equalTo(40)
+        }
+        
+        messageLabel.snp.makeConstraints { make in
+            make.edges.equalToSuperview().inset(10)
+        }
+    }    
 }

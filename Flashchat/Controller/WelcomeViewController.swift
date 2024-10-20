@@ -40,15 +40,6 @@ class WelcomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         initialize()
-//        titleLabel.text = ""
-//        var charIndex = 0.0
-//        let titleText = "⚡️FlashChat"
-//        for letter in titleText {
-//            Timer.scheduledTimer(withTimeInterval: 0.1 * charIndex, repeats: false) { (timer) in
-//                self.titleLabel.text?.append(letter)
-//            }
-//            charIndex += 1
-//        }
     }
 
     @objc func pressRegisterButton( _ sender: UIButton) {
@@ -82,7 +73,6 @@ class WelcomeViewController: UIViewController {
             make.leading.equalToSuperview().offset(10)
             make.bottom.equalTo(view.safeAreaLayoutGuide)
         }
-        
     }
 }
 
